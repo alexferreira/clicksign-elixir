@@ -14,7 +14,12 @@ defmodule Clicksign.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [ 
+      applications: [
+        :logger, 
+        :httpoison
+      ]
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +32,13 @@ defmodule Clicksign.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:mix_test_watch, "~> 0.2.6", only: [:dev]},
+      {:httpoison, "~> 0.8.2"},
+      {:bypass, "~> 0.1"},
+      {:cowboy, "~> 1.0"},
+      {:plug, "~> 1.1"},
+      {:exjsx, "~> 3.2"}
+    ]
   end
 end
