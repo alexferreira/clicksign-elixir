@@ -1,6 +1,10 @@
 defmodule Clicksign.Mixfile do
   use Mix.Project
 
+  @description """
+    Clicksign client
+  """
+
   def project do
     [app: :clicksign,
      version: "0.0.1",
