@@ -11,6 +11,7 @@ defmodule Clicksign.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: @description,
      deps: deps]
   end
 
@@ -44,5 +45,11 @@ defmodule Clicksign.Mixfile do
       {:plug, "~> 1.1"},
       {:exjsx, "~> 3.2"}
     ]
+  end
+
+  defp package do
+    [ maintainers: ["Alex Ferreira"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/alexferreira/clicksign-elixir"} ]
   end
 end
